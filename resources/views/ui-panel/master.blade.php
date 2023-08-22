@@ -21,8 +21,8 @@
             <div class="col-lg-12 col-md-12">
                 <!-- HEADER -->
                 <div class="header">
-                    <div class="row justify-content-evenly align-items-center">
-                        <div class="col-lg-6 col-md-6">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-5 col-md-5 mb-5">
                             <div class="head-text">
                                 <i class="fa-solid fa-hands-clapping text-warning mb-3 spinner"
                                     style="font-size:50px;" id="handShape"></i>
@@ -38,8 +38,9 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="col-lg-1 col-md-1"></div>
                         <div class="col-lg-6 col-md-6">
-                            <div class="head-pic mb-4">
+                            <div class="head-pic mb-4 text-center">
                                 <img src="{{ asset('images/header-pic.png') }}" alt="" id="header-pic" class="shadow rounded">
                             </div>
                         </div>
