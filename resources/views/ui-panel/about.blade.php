@@ -47,7 +47,7 @@
             <hr>
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-5 col-md-5 mb-4">
-                    <img src="{{ asset('images/skills.png') }}" alt="" class="">
+                    <img src="{{ asset('images/skills.png') }}" alt="" class="spinner-skills">
                 </div>
                 <div class="col-lg-5 col-md-5" id="mySkills">
                     <div class="right">

@@ -18,6 +18,9 @@ body{
 .spinner{
     animation: hand-rotate 1s infinite;
 }
+.spinner-skills{
+    animation: hand-rotate 7s infinite;
+}
 @keyframes hand-rotate {
     50% {transform: rotate(45deg)};
 }
