@@ -1,6 +1,6 @@
 @extends('ui-panel.master')
 @section('content')
-    <div class="row mt-5">
+    <div class="row mt-5 main-content">
         <!-- POSTS  -->
         <div class="col-lg-8 col-md-8 posts">
             @foreach ($posts as $post)

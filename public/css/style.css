@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -12,10 +13,7 @@ body{
     color: white;
     padding: 20px;
 }
-#header-pic{
-    width: 80%;
-}
-.spinner{
+.spinner-hand{
     animation: hand-rotate 1s infinite;
 }
 .spinner-skills{
@@ -32,7 +30,8 @@ body{
 #navbar{
     background-color: #342348;;
     overflow: hidden;
-    border: 1px solid green;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
 }
 #navbar a {
     color: white;
@@ -69,10 +68,7 @@ body{
     align-items: center;
 }
 /* PROJECTS  */
-ect-card:hover{
-    color: white;
-    transition: 0.5s;
-}
+
 /* LATEST POSTS  */
 .latest-post img{
     width: 100%;
@@ -144,5 +140,51 @@ ect-card:hover{
     border-radius: 5px;
     margin-top: 7px;
 }
-/* ADMIN DASHBOARD  */
+/* PROJECT CARD FROM ABOUT ME  */
+.project-card:hover{
+   background-color: #ced4da !important;
+}
+/* LATEST POST FROM ABOUT ME  */
+.latest-posts:hover{
+    color: green;
+}
 
+@media only screen and (min-width:300px) and (max-width:768px){
+    .head-text{
+        margin-bottom: 45px;
+    }
+    .main-content{
+        flex-direction: column-reverse !important;
+    }
+}
+/* ADMIN DASHBOARD  */
+#brand{
+    color: #342348;
+}
+.body-content, .side-bar{
+    margin-top: 80px;
+}
+.spinner-gear{
+    color: rgb(0, 83, 128);
+    animation: gear-rotate 5s infinite;
+}
+@keyframes gear-rotate {
+    50% {transform: rotate(360deg)}
+}
+.main-row{
+    width: 100%
+}
+/* .main{
+    padding-left: 257px;
+} */
+@media only screen and (min-width: 768px) and (max-width:1200px){
+    [class*="side-label"]{
+        display: none;
+    }
+    .side-main{
+        width: 106px;
+    }
+    .side-bar{
+       text-align: center !important;
+    }
+}

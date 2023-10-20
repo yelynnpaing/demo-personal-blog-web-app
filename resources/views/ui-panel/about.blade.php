@@ -83,7 +83,7 @@
                 <div class="col-lg-6 col-md-4 mb-4">
                     <div class="project-card">
                         <a href="{{ $project->url }}" class="text-decoration-none" target="_blank">
-                            <div class="card bg-dark-subtle shadow-sm ">
+                            <div class="card bg-white shadow-sm project-card">
                                 <div class="card-body">
                                     <img src="{{ asset('storage/project-images/'.$project->image) }}"
                                     alt="" class="card-img mb-3" style="height: 300px">
@@ -100,7 +100,7 @@
                                         <div class="">
                                             <i class="fa-solid fa-star text-primary"></i>
                                             <i class="fa-solid fa-star text-primary"></i>
-                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-solid fa-star text-primary"></i>
                                             <i class="fa-regular fa-star"></i>
                                             <i class="fa-regular fa-star"></i>
                                         </div>
@@ -124,7 +124,7 @@
             </p>
             @foreach ($posts as $post)
                 <div class="col-md-4 mb-3">
-                    <a href="{{ url('posts/'.$post->id.'/detail') }}">
+                    <a href="{{ url('posts/'.$post->id.'/detail') }}" class="latest-posts">
                         <img src="{{ asset('storage/post-images/'.$post->image) }}" alt="" class="latest-post-img mb-2">
                         <small>{{ date('d, M, Y', strtotime($post->created_at)) }} | by Dev Py </small>
                         <h4 class="mt-2">{{ $post->title }}</h4>

@@ -1,4 +1,5 @@
 @extends('admin-panel.master')
+@section('title', 'Blog Admin Dashboard')
 @section('content')
 <div class="container-fluid body-content bg-secondary">
     <div class="row">
@@ -33,7 +34,7 @@
                                         <button type="submit"
                                         class="btn btn-sm {{ $comment->status == 'show' ? 'btn-danger' : 'btn-success' }}">
                                             <i class="fa-solid {{ $comment->status == 'show' ? 'fa-eye-low-vision' : 'fa-eye'}}"></i>
-                                            {{ $comment->status == 'show' ? 'hide' : 'show'; }}
+                                            {{ $comment->status == 'show' ? 'hide' : 'show' }}
                                         </button>
                                     </form>
                                 </td>

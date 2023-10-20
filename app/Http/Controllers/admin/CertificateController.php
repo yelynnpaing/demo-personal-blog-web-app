@@ -36,7 +36,8 @@ class CertificateController extends Controller
         'You have successfully created new certificate.');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $certificate = Certificate::find($id);
         return view('admin-panel.certificate.edit', compact('certificate'));
     }
@@ -47,7 +48,7 @@ class CertificateController extends Controller
             'name' => 'required',
             'count' => 'required',
         ]);
-        
+
         $certificate = Certificate::find($id);
         $certificate->update([
             'name' => $request->name,

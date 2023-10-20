@@ -1,5 +1,5 @@
 @extends('admin-panel.master')
-@section('title', 'Edit User')
+@section('title', 'Blog Admin Dashboard')
 @section('content')
 <div class="container-fluid bg-light py-5 px-4 body-content">
     {{-- EDIT USER  --}}

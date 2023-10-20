@@ -1,4 +1,5 @@
 @extends('admin-panel.master')
+@section('title', 'Blog Admin Dashboard')
 @section('content')
     {{-- CERTIFICATE CREATE FORM --}}
     <div class="container-fluid body-content bg-secondary">

@@ -1,5 +1,5 @@
 @extends('admin-panel.master')
-@section('title', 'Dashboard')
+@section('title', 'Blog Admin Dashboard')
 @section('content')
 <div class="container-fluid bg-secondary py-5 px-4 body-content">
     <h3 class="text-white">Quick Stats <hr> </h3>

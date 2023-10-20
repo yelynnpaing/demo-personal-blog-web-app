@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Blog </title>
     <!-- BOOTSTRAP CSS --->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ANIMATE CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <div class="container-fluid p-0">
@@ -21,27 +23,98 @@
             <div class="col-lg-12 col-md-12">
                 <!-- HEADER -->
                 <div class="header">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-lg-5 col-md-5 mb-5">
+                    <div class="row justify-content-center align-items-center p-5">
+                        <div class="col-lg-6 col-md-6">
                             <div class="head-text">
-                                <i class="fa-solid fa-hands-clapping text-warning mb-3 spinner"
+                                <i class="fa-solid fa-hands-clapping text-warning mb-3 spinner-hand"
                                     style="font-size:50px;" id="handShape"></i>
-                                <h2>HELLO !</h2>
-                                <h4>WELCOME FROM MY BLOG.</h4>
-                                <h4>THANKS FOR VISITING.</h4>
-                                <h4>BE HAPPY AND SUCCESSFUL.</h4>
-                                <a href="{{ url('/') }}">
-                                    <button class="btn btn-secondary mt-4">
-                                        <i class="fa-solid fa-plus-circle"></i>
-                                        Hire my Blogs
-                                    </button>
-                                </a>
+                                <div class="fake-data" id="fakeData">
+                                    <div class="fake-slide animate__animated">
+                                        <h2>HELLO !</h2>
+                                        <h4>WELCOME FROM MY BLOG.</h4>
+                                        <h4>THANKS FOR VISITING.</h4>
+                                        <h4>BE HAPPY AND SUCCESSFUL.</h4>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-secondary mt-4">
+                                                <i class="fa-solid fa-plus-circle"></i>
+                                                Hire my Blogs
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                               <div class="main-text-slide d-none" id="mainTextSlide">
+                                    <div class="text-slide animate__animated">
+                                        <h2>HELLO !</h2>
+                                        <h4>WELCOME FROM MY BLOG.</h4>
+                                        <h4>THANKS FOR VISITING.</h4>
+                                        <h4>BE HAPPY AND SUCCESSFUL.</h4>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-secondary mt-4">
+                                                <i class="fa-solid fa-plus-circle"></i>
+                                                Hire my Blogs
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="text-slide animate__animated">
+                                        <h2 class="text-warning">HELLO !</h2>
+                                        <h4>WELCOME FROM MY BLOG.</h4>
+                                        <h4>THANKS FOR VISITING.</h4>
+                                        <h4>BE HAPPY AND SUCCESSFUL.</h4>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-secondary mt-4">
+                                                <i class="fa-solid fa-plus-circle"></i>
+                                                Hire my Blogs
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="text-slide animate__animated">
+                                        <h2 class="text-info">HELLO !</h2>
+                                        <h4>WELCOME FROM MY BLOG.</h4>
+                                        <h4>THANKS FOR VISITING.</h4>
+                                        <h4>BE HAPPY AND SUCCESSFUL.</h4>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-secondary mt-4">
+                                                <i class="fa-solid fa-plus-circle"></i>
+                                                Hire my Blogs
+                                            </button>
+                                        </a>
+                                    </div>
+                               </div>
                             </div>
                         </div>
-                        <div class="col-lg-1 col-md-1"></div>
                         <div class="col-lg-6 col-md-6">
-                            <div class="head-pic mb-4 text-center">
-                                <img src="{{ asset('images/header-pic.png') }}" alt="" id="header-pic" class="shadow rounded">
+                            <div class="row justify-content-center">
+                                <div class="w-75">
+                                    <div id="headerSlide" class="carousel slide">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                                <img src="{{ asset('images/header-pic-1.png') }}" alt="" class="d-block w-100">
+                                            <div class="carousel-caption d-none d-md-block">
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="{{ asset('images/header-pic-2.jpg') }}" alt="" class="d-block w-100">
+                                            <div class="carousel-caption d-none d-md-block">
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="{{ asset('images/header-pic-3.jpg') }}" alt="" class="d-block w-100">
+                                            <div class="carousel-caption d-none d-md-block">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#headerSlide"
+                                        data-bs-slide="prev" onclick="plusTextSlide(-1)">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#headerSlide"
+                                        data-bs-slide="next" onclick="plusTextSlide(1)">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -97,7 +170,7 @@
                                     Phone : 09 900 900 900
                                 </div>
                                 <div>
-                                    Email : yelynnpy@gmail.com
+                                    Email : yelynnpaing.mm@gmail.com
                                 </div>
                                 <div>
                                     Address : No.(1) , Latha Street , Latha Tps, Mandalay.
@@ -126,7 +199,7 @@
                         <div class="col-md-12">
                             <div class="">
                                 <div class="text-center text-white-50">
-                                    Power by : Dev Py
+                                    Power by : Dev Paing
                                 </div>
                             </div>
                         </div>
