@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
 body{
     margin: 0;
     padding: 0;
@@ -113,8 +112,11 @@ body{
     text-align: justify;
 }
 /* CATEGORY  */
-.category{
+/* .category{
     padding: 20px;
+} */
+.category-list{
+    list-style-type: none;
 }
 /* POST DETAIL  */
 .post-detail {
@@ -156,6 +158,11 @@ body{
     .main-content{
         flex-direction: column-reverse !important;
     }
+}
+
+/* PROFILE  */
+.not-allowed{
+    cursor: not-allowed;
 }
 /* ADMIN DASHBOARD  */
 #brand{

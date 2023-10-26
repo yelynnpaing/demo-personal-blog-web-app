@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LikesDislike;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class LikeDislikeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function like($postId)
     {
         $isExist = LikesDislike::where('post_id','=',$postId)->where('user_id', '=', Auth::user()->id)->first();

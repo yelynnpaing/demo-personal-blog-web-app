@@ -9,7 +9,7 @@ use App\Models\Certificate;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\LikesDislike;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Comment;
 use App\Models\User;
 
@@ -38,7 +38,12 @@ class UiController extends Controller
     public function postDetail($id)
     {
         if(!Auth::check()){
-            return redirect()->route('login');
+            // return redirect()->route('login');
+            $post = Post::find($id);
+            $likes = LikesDislike::where('post_id', $post->id)->where('type', 'like')->get();
+            $dislikes = LikesDislike::where('post_id', $post->id)->where('type', 'dislike')->get();
+            $comments = Comment::where('post_id', $post->id)->where('status', 'show')->get();
+            return view('ui-panel.post-detail', compact('post', 'likes', 'dislikes', 'comments'));
         }
         $post = Post::find($id);
         $likes = LikesDislike::where('post_id', $post->id)->where('type', 'like')->get();

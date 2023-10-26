@@ -35,10 +35,10 @@
                 <hr>
                 <div class="">
                     <h5>Categories</h5>
-                    <ul>
+                    <ul class="border p-3">
                         @foreach ($categories as $category)
-                            <li>
-                                <a href="{{ url('search_by_category/'.$category->id) }}" class="text-decoration-none">
+                            <li class="category-list">
+                                <a href="{{ url('search_by_category/'.$category->id) }}" class="text-decoration-none btn bg-primary-subtle mb-2">
                                     {{ $category->name }}
                                 </a>
                             </li>

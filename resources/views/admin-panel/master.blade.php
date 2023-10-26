@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <link rel="shortcut icon" href="{{ asset('images/ylp-favicon.png') }}" type="image/x-icon">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP CSS AND JS -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!-- FONTAWSOME CSS  -->
+    <link rel="stylesheet" href="{{ asset('fontawesome-free-6.4.2-web/css/all.min.css') }}">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
     <style>
         body{
             padding: 0;
             margin:0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
@@ -95,7 +102,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li class="dropdown-item">
-                                            <a href="{{ url('/') }}" class="text-decoration-none">
+                                            <a href="{{ url('admin/profile') }}" class="text-decoration-none">
                                                 <i class="fas fa-user-circle text-success"></i>
                                                 Profile
                                             </a>
@@ -137,32 +144,7 @@
        </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    let sideLabel1 = document.getElementById('sideLabel1');
-    let sideLabels = document.querySelectorAll('.side-label');
-    let sideMain = document.querySelector('.side-main');
-    let sideBar = document.querySelectorAll('.side-bar');
-    let navBar = document.querySelector('#navBar');
-    let sidebarToggler = document.querySelector('#sidebarToggler');
-
-    function sidebarToggle(){
-        sidebarToggler.classList.toggle('ps-5','pe-1');
-        sideMain.classList.toggle('col-md-1');
-        sideMain.classList.toggle('col-md-2');
-        navBar.classList.toggle('col-md-11');
-        navBar.classList.toggle('col-md-10');
-        sideBar.forEach(element => {
-            element.classList.toggle('text-center');
-        });
-        sideLabels.forEach(label => {
-            label.classList.toggle('d-none');
-            console.log(label);
-        });
-
-    }
-
-
-</script>
+<!-- CUSTOM JS -->
+<script src="{{ asset('js/admin-dashboard.js') }}"></script>
 </body>
 </html>

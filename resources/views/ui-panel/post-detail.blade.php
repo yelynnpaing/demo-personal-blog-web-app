@@ -40,9 +40,11 @@
             </div>
             <button type="submit" formaction="{{ url('/post/like/'.$post->id) }}"
                 class="btn btn-sm rounded-2 btn-success me-2"
-                @if ($likeStatus)
-                    @if ($likeStatus->type == 'like')
-                        disabled
+                @if(Auth::check())
+                    @if ($likeStatus)
+                        @if ($likeStatus->type == 'like')
+                            disabled
+                        @endif
                     @endif
                 @endif
             >
@@ -51,9 +53,11 @@
             </button>
             <button type="submit" formaction="{{ url('/post/dislike/'.$post->id) }}"
                 class="btn btn-sm rounded-2 btn-danger me-2"
-                @if ($dislikeStatus)
-                    @if ($dislikeStatus->type == 'dislike')
-                        disabled
+                @if(Auth::check())
+                    @if ($dislikeStatus)
+                        @if ($dislikeStatus->type == 'dislike')
+                            disabled
+                        @endif
                     @endif
                 @endif
             >
@@ -61,7 +65,7 @@
                 Dislike
             </button>
             <button type="button" class="btn btn-sm rounded-2 btn-primary" data-bs-toggle="collapse"
-            href="#commentSection">
+            data-bs-target="#commentSection" aria-expanded="false" aria-controls="commentSection">
                 <i class="fas fa-comment me-2"></i>
                 Comments
             </button>
