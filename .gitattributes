@@ -2,6 +2,7 @@
 
 *.css linguist-vendored
 *.scss linguist-vendored
+*.less linguist-vendored
 
 *.blade.php diff=html
 *.css diff=css
