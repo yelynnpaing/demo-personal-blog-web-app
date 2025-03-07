@@ -85,7 +85,7 @@
                                     <div id="headerSlide" class="carousel slide">
                                         <div class="carousel-inner">
                                           <div class="carousel-item active">
-                                                <img src="{{ asset('images/header-pic-1.png') }}" alt="" class="d-block w-100">
+                                                <img src="{{ asset('images/header-pic-1.jpg') }}" alt="" class="d-block w-100">
                                             <div class="carousel-caption d-none d-md-block">
                                             </div>
                                           </div>
